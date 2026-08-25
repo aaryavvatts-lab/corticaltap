@@ -1,0 +1,40 @@
+.head{padding:44px 0 20px}
+.lede{font-size:1.04rem;margin-top:.5rem}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:20px;align-items:start;
+  padding-bottom:20px}
+.controls{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:18px}
+.field{display:flex;align-items:center;gap:9px;font-size:.87rem;color:var(--ink-2)}
+.time{font-size:.83rem;color:var(--muted);margin:.5rem 0 1.4rem}
+.verdict{display:grid;grid-template-columns:220px 1fr;gap:26px;align-items:center}
+.gaugeBox{text-align:center}
+.gauge{width:100%;height:112px;display:block}
+.pct{font-size:1.7rem;margin:.2rem 0 0;color:var(--ink);font-weight:700}
+.pctLabel{font-size:.75rem;color:var(--muted);margin:.15rem 0 0;line-height:1.35}
+.answers{display:flex;flex-direction:column;gap:9px}
+.pill,.pillOn,.pillDim{display:flex;align-items:baseline;gap:10px;padding:9px 14px;
+  border:1px solid var(--rule);border-radius:var(--radius);background:var(--surface-2)}
+.pillOn{background:var(--signal-soft);border-color:var(--signal)}
+.pillDim{opacity:.65}
+.pillK{font-family:"JetBrains Mono",monospace;font-size:.63rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);min-width:82px}
+.pillV{font-size:1rem;color:var(--ink);font-weight:700}
+.right{color:var(--good);font-weight:700;margin:.2rem 0 0;font-size:.9rem}
+.wrong{color:var(--bad);font-weight:700;margin:.2rem 0 0;font-size:.9rem}
+.tally{font-size:.82rem;color:var(--muted);margin:.4rem 0 0}
+.small{font-size:.83rem;color:var(--muted);margin:0 0 .8rem}
+.side{display:flex;flex-direction:column;gap:16px}
+.h3{font-size:1.02rem;margin:0 0 .6rem}
+.weights{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:3px}
+.weights li{display:grid;grid-template-columns:52px 1fr 44px;gap:8px;align-items:center;
+  font-size:.75rem;color:var(--ink-2)}
+.track{position:relative;height:9px;background:var(--surface-2);border:1px solid var(--rule);
+  border-radius:2px;overflow:hidden}
+.mid{position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--rule-strong)}
+.pos,.neg{position:absolute;top:0;bottom:0}
+.pos{background:var(--signal)}
+.neg{background:var(--steel)}
+.srOnly{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@media (max-width:1000px){
+  .grid{grid-template-columns:1fr}
+  .verdict{grid-template-columns:1fr;gap:16px}
+}

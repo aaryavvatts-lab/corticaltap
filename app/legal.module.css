@@ -1,0 +1,18 @@
+.head{padding:46px 0 18px;border-bottom:1px solid var(--rule)}
+.updated{font-family:"JetBrains Mono",monospace;font-size:.74rem;color:var(--muted);
+  margin:.6rem 0 0}
+.body{padding:34px 0 20px;max-width:72ch}
+.body h2{margin:2.1rem 0 .7rem;font-size:1.26rem;scroll-margin-top:78px}
+.body h2:first-child{margin-top:0}
+.body h3{margin:1.4rem 0 .4rem;font-size:1.02rem}
+.body p,.body li{font-size:.97rem}
+.summary{background:var(--surface);border:1px solid var(--rule);
+  border-left:3px solid var(--signal);border-radius:var(--radius);padding:20px 24px;
+  margin-bottom:30px}
+.summary p{margin:0 0 .7rem}
+.summary p:last-child{margin-bottom:0}
+.summary strong{color:var(--ink)}
+.tbl{margin:1.2rem 0}
+.contact{background:var(--surface-2);border:1px solid var(--rule);border-radius:var(--radius);
+  padding:18px 22px;margin-top:30px}
+.contact p{margin:0;font-size:.92rem}

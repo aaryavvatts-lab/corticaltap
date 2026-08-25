@@ -1,0 +1,5 @@
+.bar{position:fixed;left:16px;right:16px;bottom:16px;z-index:90;max-width:620px;
+  margin:0 auto;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:var(--radius);box-shadow:var(--shadow);padding:14px 16px;
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.bar p{margin:0;font-size:.85rem;flex:1;min-width:240px;color:var(--ink-2)}

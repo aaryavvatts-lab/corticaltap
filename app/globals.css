@@ -1,0 +1,152 @@
+/* ---------------------------------------------------------------
+   NeuroTap design tokens.
+   Palette comes from lab paper and an oscilloscope trace: warm off
+   white, near black ink, one burnt amber signal colour, one steel
+   blue for the second series in charts.
+   --------------------------------------------------------------- */
+:root{
+  --paper:#FAFAF8;
+  --surface:#FFFFFF;
+  --surface-2:#F2F2EE;
+  --ink:#16181A;
+  --ink-2:#3A3F44;
+  --muted:#61666B;
+  --rule:#E2E3DF;
+  --rule-strong:#C9CBC5;
+
+  --signal:#B4530A;
+  --signal-soft:#F7EADD;
+  --steel:#33637D;
+  --steel-soft:#E4EDF2;
+  --good:#2F6A4A;
+  --good-soft:#E4EFE8;
+  --bad:#A32C2C;
+  --bad-soft:#F6E5E4;
+
+  --focus:#B4530A;
+  --shadow:0 1px 2px rgba(22,24,26,.05), 0 10px 28px -18px rgba(22,24,26,.32);
+  --radius:3px;
+  --maxw:1180px;
+  --prose:66ch;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0E1012;
+    --surface:#16191C;
+    --surface-2:#1D2125;
+    --ink:#E7E9E6;
+    --ink-2:#BFC4C7;
+    --muted:#949A9F;
+    --rule:#272C31;
+    --rule-strong:#3A4148;
+
+    --signal:#E4863C;
+    --signal-soft:#2A1B0F;
+    --steel:#7FB2CC;
+    --steel-soft:#12222B;
+    --good:#5FBE8D;
+    --good-soft:#112318;
+    --bad:#E27C79;
+    --bad-soft:#2A1516;
+
+    --focus:#E4863C;
+    --shadow:0 1px 2px rgba(0,0,0,.5), 0 12px 30px -18px rgba(0,0,0,.9);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0E1012;
+  --surface:#16191C;
+  --surface-2:#1D2125;
+  --ink:#E7E9E6;
+  --ink-2:#BFC4C7;
+  --muted:#949A9F;
+  --rule:#272C31;
+  --rule-strong:#3A4148;
+
+  --signal:#E4863C;
+  --signal-soft:#2A1B0F;
+  --steel:#7FB2CC;
+  --steel-soft:#12222B;
+  --good:#5FBE8D;
+  --good-soft:#112318;
+  --bad:#E27C79;
+  --bad-soft:#2A1516;
+
+  --focus:#E4863C;
+  --shadow:0 1px 2px rgba(0,0,0,.5), 0 12px 30px -18px rgba(0,0,0,.9);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:"Newsreader",Georgia,"Times New Roman",serif;
+  line-height:1.18;text-wrap:balance;margin:0;font-weight:600}
+h1{font-size:clamp(2.1rem,5vw,3.25rem);letter-spacing:-.018em}
+h2{font-size:clamp(1.5rem,3vw,2rem);letter-spacing:-.012em}
+h3{font-size:1.18rem}
+p{margin:0 0 1.05rem;color:var(--ink-2)}
+a{color:var(--signal);text-underline-offset:2px}
+a:hover{text-decoration-thickness:2px}
+strong{color:var(--ink);font-weight:700}
+small{font-size:.84rem}
+hr{border:0;border-top:1px solid var(--rule);margin:2rem 0}
+ul,ol{color:var(--ink-2);padding-left:1.2rem}
+li{margin-bottom:.4rem}
+
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px;border-radius:2px}
+
+.mono{font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-variant-numeric:tabular-nums}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;width:100%}
+.prose{max-width:var(--prose)}
+.eyebrow{font-family:"JetBrains Mono",monospace;font-size:.7rem;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--muted);margin:0 0 .8rem}
+
+.skip{position:absolute;left:-9999px;top:0;background:var(--signal);color:#fff;
+  padding:10px 16px;z-index:200}
+.skip:focus{left:8px;top:8px}
+
+.btn{display:inline-flex;align-items:center;gap:.5rem;font:inherit;font-size:.92rem;
+  padding:9px 16px;border:1px solid var(--rule-strong);background:var(--surface);
+  color:var(--ink);border-radius:var(--radius);cursor:pointer;text-decoration:none;
+  transition:border-color .12s ease,background .12s ease}
+.btn:hover{border-color:var(--signal);background:var(--surface-2)}
+.btn[aria-pressed="true"],.btn.on{background:var(--signal);border-color:var(--signal);color:#fff}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn-primary{background:var(--signal);border-color:var(--signal);color:#fff}
+.btn-primary:hover{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:var(--radius);
+  box-shadow:var(--shadow)}
+.pad{padding:22px 24px}
+
+.tw{overflow-x:auto;border:1px solid var(--rule);background:var(--surface);
+  border-radius:var(--radius)}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{padding:9px 14px;text-align:left;border-bottom:1px solid var(--rule)}
+th{font-family:"JetBrains Mono",monospace;font-size:.67rem;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--muted);font-weight:500;background:var(--surface-2)}
+td.n,th.n{text-align:right;font-family:"JetBrains Mono",monospace;font-variant-numeric:tabular-nums}
+tbody tr:last-child td{border-bottom:none}
+
+input[type="range"]{accent-color:var(--signal);width:100%}
+select,input[type="text"],input[type="number"]{font:inherit;font-size:.92rem;
+  padding:8px 10px;border:1px solid var(--rule-strong);border-radius:var(--radius);
+  background:var(--surface);color:var(--ink)}
+
+.grid{display:grid;gap:20px}
+.flow > * + *{margin-top:var(--flow,1rem)}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.001ms!important;animation-iteration-count:1!important;
+    transition-duration:.001ms!important;scroll-behavior:auto!important}
+}
+@media (max-width:720px){ body{font-size:16px} .wrap{padding:0 18px} }

@@ -1,0 +1,42 @@
+.head{padding:46px 0 22px}
+.lede{font-size:1.05rem;margin-top:.5rem}
+.gate{padding-bottom:26px}
+.gateCard{background:var(--good-soft);border:1px solid var(--good);border-radius:var(--radius);
+  padding:24px 26px;max-width:760px}
+.gateCard h2{font-size:1.3rem;margin:.6rem 0 .6rem}
+.gateCard p{font-size:.95rem}
+.stat{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+.stat span:first-child{font-size:1.5rem;font-weight:700;color:var(--good)}
+.stat span:last-child{flex:1;min-width:240px}
+.note{font-size:.87rem;color:var(--muted);margin-bottom:0}
+.result{padding:40px 0;border-top:1px solid var(--rule)}
+.rHead{margin-bottom:22px}
+.rHead h2{font-size:1.5rem;margin-top:.6rem;max-width:24ch}
+.chip{display:inline-block;font-family:"JetBrains Mono",monospace;font-size:.63rem;
+  letter-spacing:.11em;text-transform:uppercase;padding:4px 10px;border-radius:2px}
+.good{background:var(--good-soft);color:var(--good)}
+.bad{background:var(--bad-soft);color:var(--bad)}
+.rBody{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:38px;
+  align-items:start}
+.rText p{font-size:.96rem}
+.rChart{position:sticky;top:78px}
+.pvals{list-style:none;padding:0;margin:1.2rem 0 0;display:flex;flex-direction:column;gap:7px;
+  font-size:.88rem;color:var(--ink-2)}
+.pvals li{padding-left:16px;position:relative}
+.pvals li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;
+  border-radius:50%;background:var(--rule-strong)}
+.fig{margin:0}
+.fig img{width:100%;height:auto;display:block;border:1px solid var(--rule);
+  border-radius:var(--radius);background:#fff}
+.fig figcaption{font-size:.79rem;color:var(--muted);margin-top:9px;line-height:1.5}
+.tableSec{padding:40px 0;border-top:1px solid var(--rule)}
+.tableSec h2{margin-bottom:1rem}
+.cap{caption-side:bottom;text-align:left;font-size:.78rem;color:var(--muted);
+  padding:10px 14px}
+.hl td{background:var(--signal-soft)}
+.wrapUp{padding:34px 0 20px;border-top:1px solid var(--rule)}
+.wrapUp h3{font-size:1.1rem;margin:1.6rem 0 .5rem}
+@media (max-width:900px){
+  .rBody{grid-template-columns:1fr;gap:24px}
+  .rChart{position:static}
+}

@@ -1,0 +1,44 @@
+.hero{border-bottom:1px solid var(--rule);background:var(--surface)}
+.heroInner{padding:76px 24px 58px;max-width:960px}
+.h1{margin:0 0 1.1rem;max-width:17ch}
+.lede{font-size:1.14rem;color:var(--ink-2);max-width:60ch;margin:0 0 1.9rem}
+.ctas{display:flex;gap:11px;flex-wrap:wrap}
+.numbers{border-bottom:1px solid var(--rule);background:var(--surface-2)}
+.numGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:26px;padding-top:26px;padding-bottom:26px}
+.numGrid div{display:flex;flex-direction:column;gap:3px}
+.nv{font-family:"JetBrains Mono",monospace;font-size:1.62rem;color:var(--signal);
+  font-weight:500;line-height:1.1}
+.nk{font-size:.79rem;color:var(--muted);max-width:22ch;line-height:1.4}
+.block{padding:56px 0}
+.secH{margin-bottom:1.4rem}
+.findings{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}
+.find{background:var(--surface);border:1px solid var(--rule);border-radius:var(--radius);
+  padding:22px 22px 20px;box-shadow:var(--shadow)}
+.find h3{font-size:1.09rem;margin:.7rem 0 .5rem}
+.find p{font-size:.92rem;margin:0}
+.chip{display:inline-block;font-family:"JetBrains Mono",monospace;font-size:.62rem;
+  letter-spacing:.11em;text-transform:uppercase;padding:4px 9px;border-radius:2px}
+.chipBad{background:var(--bad-soft);color:var(--bad)}
+.chipGood{background:var(--good-soft);color:var(--good)}
+.more{margin-top:1.5rem;font-size:.93rem}
+.toolsWrap{background:var(--surface);border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);padding:56px 0}
+.toolsLede{font-size:.96rem;color:var(--muted);max-width:56ch;margin:0 0 1.7rem}
+.toolGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:16px}
+.tool{display:block;padding:22px 20px;border:1px solid var(--rule);border-radius:var(--radius);
+  background:var(--paper);text-decoration:none;transition:border-color .13s ease,transform .13s ease}
+.tool:hover{border-color:var(--signal);transform:translateY(-2px)}
+.toolN{font-family:"JetBrains Mono",monospace;font-size:.68rem;color:var(--signal);
+  letter-spacing:.1em}
+.tool h3{font-size:1.05rem;margin:.5rem 0 .45rem;color:var(--ink)}
+.tool p{font-size:.86rem;color:var(--ink-2);margin:0 0 .9rem}
+.toolTag{font-family:"JetBrains Mono",monospace;font-size:.64rem;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--muted)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.split h2{font-size:1.3rem;margin-bottom:.6rem}
+.split p{font-size:.94rem}
+@media (max-width:820px){
+  .heroInner{padding:52px 18px 42px}
+  .split{grid-template-columns:1fr;gap:28px}
+}
