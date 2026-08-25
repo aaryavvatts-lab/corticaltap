@@ -43,12 +43,12 @@ export default function Page() {
               </thead>
               <tbody>
                 <tr>
-                  <td className="mono">nt-theme</td><td>Local storage</td>
+                  <td className="mono">ct-theme</td><td>Local storage</td>
                   <td className="mono">light or dark</td>
                   <td>Keeps the colours you picked instead of resetting every visit</td>
                 </tr>
                 <tr>
-                  <td className="mono">nt-notice-seen</td><td>Local storage</td>
+                  <td className="mono">ct-notice-seen</td><td>Local storage</td>
                   <td className="mono">1</td>
                   <td>Stops the storage banner reappearing after you close it</td>
                 </tr>

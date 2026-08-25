@@ -34,7 +34,7 @@ export default function Page() {
 
         <h2 id="who">Who runs this site</h2>
         <p>
-          NeuroTap is a personal research and education project by Aaryav Sharma. It is not
+          CorticalTap is a personal research and education project by Aaryav Sharma. It is not
           run by a company, a hospital or a university, and it is not connected to the team
           that collected the brain recordings it uses.
         </p>
@@ -66,8 +66,8 @@ export default function Page() {
                 <tr><th scope="col">Name</th><th scope="col">Purpose</th><th scope="col">Kept for</th></tr>
               </thead>
               <tbody>
-                <tr><td className="mono">nt-theme</td><td>Remembers whether you chose light or dark</td><td>Until you clear site data</td></tr>
-                <tr><td className="mono">nt-notice-seen</td><td>Remembers that you closed the storage banner</td><td>Until you clear site data</td></tr>
+                <tr><td className="mono">ct-theme</td><td>Remembers whether you chose light or dark</td><td>Until you clear site data</td></tr>
+                <tr><td className="mono">ct-notice-seen</td><td>Remembers that you closed the storage banner</td><td>Until you clear site data</td></tr>
               </tbody>
             </table>
           </div>

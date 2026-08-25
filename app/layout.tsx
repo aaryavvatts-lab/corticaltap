@@ -5,17 +5,17 @@ import SiteFooter from "@/components/SiteFooter";
 import CookieNotice from "@/components/CookieNotice";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://neurotap.vercel.app"),
+  metadataBase: new URL("https://corticaltap.vercel.app"),
   title: {
-    default: "NeuroTap: reading movement from brain surface recordings",
-    template: "%s | NeuroTap",
+    default: "CorticalTap: reading movement from brain surface recordings",
+    template: "%s | CorticalTap",
   },
   description:
     "Open tools and results from a study of 735 electrodes recorded inside the skull while eight young patients played a tapping game. Explore the electrodes in 3D, run a real decoder in your browser, and check your own signals.",
   keywords: ["ECoG", "brain computer interface", "iEEG", "movement decoding", "open data", "ds005931"],
   authors: [{ name: "Aaryav Sharma" }],
   openGraph: {
-    title: "NeuroTap",
+    title: "CorticalTap",
     description:
       "Explore 735 real brain electrodes in 3D, run a movement decoder in your browser, and test your own signals.",
     type: "website",

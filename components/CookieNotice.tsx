@@ -9,7 +9,7 @@ import styles from "./CookieNotice.module.css";
 export default function CookieNotice() {
   const [show, setShow] = useState(false);
   useEffect(() => {
-    if (!localStorage.getItem("nt-notice-seen")) setShow(true);
+    if (!localStorage.getItem("ct-notice-seen")) setShow(true);
   }, []);
   if (!show) return null;
   return (
@@ -20,7 +20,7 @@ export default function CookieNotice() {
         <Link href="/cookies">What is stored</Link>
       </p>
       <button className="btn"
-        onClick={() => { localStorage.setItem("nt-notice-seen", "1"); setShow(false); }}>
+        onClick={() => { localStorage.setItem("ct-notice-seen", "1"); setShow(false); }}>
         Got it
       </button>
     </div>

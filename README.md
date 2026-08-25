@@ -1,10 +1,10 @@
-# NeuroTap
+# CorticalTap
 
 Interactive site for a study on reading finger movement from recordings made on the
 surface of the brain. Eight patients, 735 electrodes, about 57 minutes of recording,
 all from a public dataset.
 
-Live: https://neurotap.vercel.app
+Live: https://corticaltap.vercel.app
 
 ## What is on it
 

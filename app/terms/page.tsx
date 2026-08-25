@@ -36,7 +36,7 @@ export default function Page() {
 
         <h2 id="medical">Not medical advice</h2>
         <p>
-          This is the important one. NeuroTap is for education and research. It is not a
+          This is the important one. CorticalTap is for education and research. It is not a
           medical device, has not been reviewed or approved by any regulator, and must not
           be used to diagnose, treat, monitor or make decisions about any medical condition,
           including epilepsy.

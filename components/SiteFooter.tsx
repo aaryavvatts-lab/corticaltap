@@ -6,7 +6,7 @@ export default function SiteFooter() {
     <footer className={styles.footer}>
       <div className={`wrap ${styles.inner}`}>
         <div className={styles.about}>
-          <p className={styles.name}>NeuroTap</p>
+          <p className={styles.name}>CorticalTap</p>
           <p className={styles.blurb}>
             A student project on reading finger movement from recordings made on the
             surface of the brain. All data here is public and shared under CC0. The

@@ -23,7 +23,7 @@ export default function SiteHeader() {
   const [theme, setTheme] = useState<"auto" | "light" | "dark">("auto");
 
   useEffect(() => {
-    const saved = localStorage.getItem("nt-theme") as "light" | "dark" | null;
+    const saved = localStorage.getItem("ct-theme") as "light" | "dark" | null;
     if (saved) {
       setTheme(saved);
       document.documentElement.setAttribute("data-theme", saved);
@@ -38,19 +38,19 @@ export default function SiteHeader() {
     const next = isDark ? "light" : "dark";
     setTheme(next);
     document.documentElement.setAttribute("data-theme", next);
-    localStorage.setItem("nt-theme", next);
+    localStorage.setItem("ct-theme", next);
   }
 
   return (
     <header className={styles.header}>
       <div className={`wrap ${styles.bar}`}>
-        <Link href="/" className={styles.brand} aria-label="NeuroTap home">
+        <Link href="/" className={styles.brand} aria-label="CorticalTap home">
           <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true">
             <path d="M2 20 L7 20 L9 12 L12 25 L15 8 L18 22 L21 16 L24 16 L26 13 L30 13"
               fill="none" stroke="var(--signal)" strokeWidth="2.4"
               strokeLinecap="round" strokeLinejoin="round" />
           </svg>
-          <span>NeuroTap</span>
+          <span>CorticalTap</span>
         </Link>
 
         <nav className={`${styles.nav} ${open ? styles.navOpen : ""}`} aria-label="Main">
