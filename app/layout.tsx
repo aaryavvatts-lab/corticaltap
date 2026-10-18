@@ -18,7 +18,7 @@ const erode = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://corticaltap.vercel.app"),
+  metadataBase: new URL("https://ecog-movement-decoder.vercel.app"),
   title: {
     default: "CorticalTap: reading movement from brain surface recordings",
     template: "%s | CorticalTap",

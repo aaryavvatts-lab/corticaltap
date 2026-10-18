@@ -4,7 +4,7 @@ Interactive site for a study on reading finger movement from recordings made on 
 surface of the brain. Eight patients, 735 electrodes, about 57 minutes of recording,
 all from a public dataset.
 
-Live: https://corticaltap.vercel.app
+Live: https://ecog-movement-decoder.vercel.app
 
 ## What is on it
 

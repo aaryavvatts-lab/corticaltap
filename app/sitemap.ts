@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const BASE = "https://corticaltap.vercel.app";
+const BASE = "https://ecog-movement-decoder.vercel.app";
 const PAGES = ["", "/explore", "/signals", "/decode", "/analyze", "/splits",
   "/findings", "/methods", "/references", "/about",
   "/privacy", "/terms", "/cookies", "/accessibility"];
