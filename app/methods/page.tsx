@@ -12,8 +12,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <section className={`wrap ${styles.head}`}>
-        <p className="eyebrow">Methods</p>
+      <section className={`wrap page-head ${styles.head}`}>
         <h1>How it was actually done</h1>
         <p className={`prose ${styles.lede}`}>
           Enough detail to rebuild this from the public files. Where a choice could have

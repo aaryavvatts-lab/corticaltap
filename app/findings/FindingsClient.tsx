@@ -14,9 +14,8 @@ export default function FindingsClient() {
 
   return (
     <>
-      <section className={`wrap ${styles.head}`}>
-        <p className="eyebrow">Results</p>
-        <h1>What the model did, and what it did not</h1>
+      <section className={`wrap page-head ${styles.head}`}>
+        <h1>What held up and what did not</h1>
         <p className={`prose ${styles.lede}`}>
           Each claim below is paired with the control that could have proved it wrong.
           That pairing is the whole point. Three of the four claims did not survive, and

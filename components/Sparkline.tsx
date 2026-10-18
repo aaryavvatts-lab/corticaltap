@@ -30,10 +30,10 @@ export default function Sparkline({
       )}
       <path d={d} fill="none" stroke={color} strokeWidth="2"
         strokeLinejoin="round" strokeLinecap="round" />
-      {yLabel && <text x="2" y="10" fontSize="9" fill="var(--muted)"
-        fontFamily="JetBrains Mono, monospace">{yLabel}</text>}
-      {xLabel && <text x={width} y={height + 12} fontSize="9" fill="var(--muted)"
-        textAnchor="end" fontFamily="JetBrains Mono, monospace">{xLabel}</text>}
+      {yLabel && <text x="2" y="10" fontSize="13" fill="var(--muted)"
+        fontFamily="inherit">{yLabel}</text>}
+      {xLabel && <text x={width} y={height + 12} fontSize="13" fill="var(--muted)"
+        textAnchor="end" fontFamily="inherit">{xLabel}</text>}
     </svg>
   );
 }

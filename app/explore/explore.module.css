@@ -1,44 +1,42 @@
 .head{padding:44px 0 22px}
-.lede{font-size:1.06rem;margin-top:.5rem}
+.lede{font-size:var(--step-body);margin-top:.5rem}
 .layout{display:grid;grid-template-columns:minmax(0,1fr) 372px;gap:22px;align-items:start}
 .stage{position:relative;height:min(70vh,620px);background:var(--surface-2);
-  border:1px solid var(--rule);border-radius:var(--radius);overflow:hidden}
+  overflow:hidden}
 .loading{position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);
-  font-size:.9rem;margin:0}
-.hint{position:absolute;left:12px;bottom:10px;font-family:"JetBrains Mono",monospace;
-  font-size:.68rem;color:var(--muted);background:var(--surface);padding:4px 9px;
-  border:1px solid var(--rule);border-radius:var(--radius)}
-.legend{position:absolute;right:12px;bottom:10px;display:flex;align-items:center;gap:8px;
-  font-family:"JetBrains Mono",monospace;font-size:.66rem;color:var(--muted);
-  background:var(--surface);padding:5px 9px;border:1px solid var(--rule);
-  border-radius:var(--radius)}
-.ramp{width:74px;height:8px;border-radius:2px;
-  background:linear-gradient(90deg,#2C3E4C,#C9C4B4,#C4560A)}
+  font-size:var(--step-body);margin:0}
+.hint{position:absolute;left:12px;bottom:10px;
+  font-size:var(--step-small);color:var(--muted);background:var(--surface);padding:4px 9px;
+  right:12px;bottom:10px;display:flex;align-items:center;gap:8px;
+  font-size:var(--step-small);color:var(--muted);
+  background:var(--surface);padding:5px 9px;
+  height:8px;
+  background:var(--map-mid)}
 .panel{display:flex;flex-direction:column;gap:16px}
-.h3{font-size:1.02rem;margin:0 0 .7rem}
+.h3{font-size:var(--step-body);margin:0 0 .7rem}
 .modes{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:.7rem}
-.modes button{font-size:.83rem;padding:7px 11px}
-.help{font-size:.83rem;color:var(--muted);margin:0 0 .9rem}
-.note{font-size:.78rem;color:var(--muted);margin:.6rem 0 0}
+.modes button{font-size:var(--step-small);padding:7px 11px}
+.help{font-size:var(--step-small);color:var(--muted);margin:0 0 .9rem}
+.note{font-size:var(--step-small);color:var(--muted);margin:.6rem 0 0}
 .field{display:flex;align-items:center;justify-content:space-between;gap:10px;
-  font-size:.87rem;margin-bottom:.8rem}
+  font-size:var(--step-body);margin-bottom:.8rem}
 .field select{min-width:150px}
-.check{display:flex;align-items:center;gap:8px;font-size:.87rem;color:var(--ink-2)}
+.check{display:flex;align-items:center;gap:8px;font-size:var(--step-body);color:var(--ink-2)}
 .dl{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;margin:0 0 1rem}
 .dl div{display:flex;flex-direction:column}
-.dl dt{font-family:"JetBrains Mono",monospace;font-size:.63rem;letter-spacing:.1em;
-  text-transform:uppercase;color:var(--muted)}
-.dl dd{margin:2px 0 0;font-size:.9rem;color:var(--ink)}
-.chartTitle{font-size:.8rem;color:var(--muted);margin:.4rem 0 .3rem}
-.axis{display:flex;justify-content:space-between;font-family:"JetBrains Mono",monospace;
-  font-size:.66rem;color:var(--muted);margin-top:2px;margin-bottom:.7rem}
+.dl dt{font-size:var(--step-small);
+  color:var(--muted)}
+.dl dd{margin:2px 0 0;font-size:var(--step-body);color:var(--ink)}
+.chartTitle{font-size:var(--step-small);color:var(--muted);margin:.4rem 0 .3rem}
+.axis{display:flex;justify-content:space-between;
+  font-size:var(--step-small);color:var(--muted);margin-top:2px;margin-bottom:.7rem}
 .top{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:3px}
 .topBtn{width:100%;display:grid;grid-template-columns:74px 1fr 42px;align-items:center;
   gap:9px;background:none;border:0;padding:5px 4px;cursor:pointer;font:inherit;
-  font-size:.78rem;color:var(--ink-2);border-radius:2px;text-align:left}
+  font-size:var(--step-small);color:var(--ink-2);text-align:left}
 .topBtn:hover{background:var(--surface-2);color:var(--ink)}
-.bar{height:7px;background:var(--surface-2);border-radius:2px;overflow:hidden;
-  border:1px solid var(--rule)}
+.bar{height:7px;background:var(--surface-2);overflow:hidden;
+  }
 .bar span{display:block;height:100%;background:var(--signal)}
 .readout{padding:44px 0 10px}
 @media (max-width:1000px){

@@ -101,8 +101,7 @@ export default function DecodeClient() {
 
   return (
     <>
-      <section className={`wrap ${styles.head}`}>
-        <p className="eyebrow">Tool 3 of 5</p>
+      <section className={`wrap page-head ${styles.head}`}>
         <h1>Run the decoder yourself</h1>
         <p className={`prose ${styles.lede}`}>
           Pick any moment in a recording. The decoder reads high gamma power from sixteen

@@ -11,10 +11,9 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <section className={`wrap ${styles.head}`}>
-        <p className="eyebrow">Legal</p>
+      <section className={`wrap page-head ${styles.head}`}>
         <h1>Privacy</h1>
-        <p className={styles.updated}>Last updated 25 August 2026</p>
+        <p className={styles.updated}>Last updated 18 October 2026</p>
       </section>
 
       <section className={`wrap ${styles.body}`}>
@@ -66,15 +65,14 @@ export default function Page() {
                 <tr><th scope="col">Name</th><th scope="col">Purpose</th><th scope="col">Kept for</th></tr>
               </thead>
               <tbody>
-                <tr><td className="mono">ct-theme</td><td>Remembers whether you chose light or dark</td><td>Until you clear site data</td></tr>
-                <tr><td className="mono">ct-notice-seen</td><td>Remembers that you closed the storage banner</td><td>Until you clear site data</td></tr>
+                <tr><td><code>theme</code></td><td>Remembers whether you chose light or dark, and only if you pressed the control in the header</td><td>Until you clear site data</td></tr>
               </tbody>
             </table>
           </div>
         </div>
         <p>
-          Both are held in local storage, not cookies. Neither contains anything that could
-          identify you. See the <Link href="/cookies">storage page</Link> for detail.
+          It is held in local storage, not a cookie. It contains nothing that could
+          identify you, and if you never press the control nothing is stored at all. See the <Link href="/cookies">storage page</Link> for detail.
         </p>
 
         <h2 id="hosting">Hosting and server logs</h2>
@@ -95,10 +93,9 @@ export default function Page() {
 
         <h2 id="third">Other services</h2>
         <p>
-          Type on this site is served by Google Fonts, which means your browser requests
-          font files from Google servers and Google receives the request information that
-          comes with it. If you would rather avoid that, blocking third party requests in
-          your browser leaves the site fully readable in a fallback typeface.
+          The typeface is served from this site under its own licence rather than from a
+          font service, so loading a page tells no other company that you visited. Every
+          file a page loads comes from this same address.
         </p>
         <p>
           Links to research papers point at publishers and preprint servers. Once you follow

@@ -56,9 +56,8 @@ export default function ExploreClient() {
 
   return (
     <>
-      <section className={`wrap ${styles.head}`}>
-        <p className="eyebrow">Tool 1 of 5</p>
-        <h1>Where movement shows up on the brain</h1>
+      <section className={`wrap page-head ${styles.head}`}>
+        <h1>Where movement shows up</h1>
         <p className={`prose ${styles.lede}`}>
           Every dot is a real electrode contact resting on the surface of someone&apos;s
           brain. Eight patients, {file ? file.electrodes.length : 735} contacts, all on

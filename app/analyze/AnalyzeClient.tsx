@@ -234,11 +234,12 @@ function TapMode() {
     return { iti, mean, sd, med, cv: sd / mean, bpm: 60 / mean, n: taps.length };
   }, [taps]);
 
-  // Median inter tap interval per patient, measured from the recordings.
+  // Median inter tap interval per patient, measured from the recordings. The ids are the
+  // study's own patient numbers (sub-01 to sub-08), not decoration. taste-skill-ignore
   const PATIENTS = [
-    { id: "01", med: 1.08 }, { id: "02", med: 1.02 }, { id: "03", med: 1.71 },
-    { id: "04", med: 1.11 }, { id: "05", med: 1.02 }, { id: "06", med: 0.89 },
-    { id: "07", med: 0.95 }, { id: "08", med: 1.07 },
+    { id: "01", med: 1.08 }, { id: "02", med: 1.02 }, { id: "03", med: 1.71 }, // taste-skill-ignore
+    { id: "04", med: 1.11 }, { id: "05", med: 1.02 }, { id: "06", med: 0.89 }, // taste-skill-ignore
+    { id: "07", med: 0.95 }, { id: "08", med: 1.07 }, // taste-skill-ignore
   ];
 
   return (
@@ -325,8 +326,7 @@ export default function AnalyzeClient() {
   const [mode, setMode] = useState<Mode>("file");
   return (
     <>
-      <section className={`wrap ${styles.head}`}>
-        <p className="eyebrow">Tool 4 of 5</p>
+      <section className={`wrap page-head ${styles.head}`}>
         <h1>Put your own data through it</h1>
         <p className={`prose ${styles.lede}`}>
           The same maths the study used, pointed at whatever you bring. Load a recorded

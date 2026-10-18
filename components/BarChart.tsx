@@ -18,14 +18,14 @@ export default function BarChart({
         {rows.map((r) => (
           <li key={r.label}>
             <div style={{ display: "flex", justifyContent: "space-between",
-              fontSize: ".84rem", marginBottom: 4 }}>
+              fontSize: "var(--step-body)", marginBottom: 4 }}>
               <span style={{ color: "var(--ink-2)" }}>{r.label}</span>
-              <span className="mono" style={{ color: "var(--ink)", fontWeight: 700 }}>
+              <span className="mono" style={{ color: "var(--ink)", fontWeight: 600 }}>
                 {r.value.toFixed(3)}{unit}
               </span>
             </div>
             <div style={{ position: "relative", height: 22, background: "var(--surface-2)",
-              border: "1px solid var(--rule)", borderRadius: 2 }}>
+              borderRadius: 0 }}>
               <div style={{ position: "absolute", left: 0, top: 0, bottom: 0,
                 width: `${pos(r.value)}%`, background: color(r.tone), opacity: .82 }} />
               {r.points?.map((p, i) => (
@@ -40,10 +40,10 @@ export default function BarChart({
         ))}
       </ul>
       <div style={{ display: "flex", justifyContent: "space-between", marginTop: 6,
-        fontSize: ".68rem", color: "var(--muted)", fontFamily: "JetBrains Mono, monospace" }}>
+        fontSize: "var(--step-small)", color: "var(--muted)" }}>
         <span>{min.toFixed(1)}</span><span>{max.toFixed(1)}</span>
       </div>
-      {caption && <p style={{ fontSize: ".78rem", color: "var(--muted)", marginTop: 8 }}>{caption}</p>}
+      {caption && <p style={{ fontSize: "var(--step-small)", color: "var(--muted)", marginTop: 8 }}>{caption}</p>}
     </div>
   );
 }

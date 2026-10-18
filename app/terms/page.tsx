@@ -11,10 +11,9 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <section className={`wrap ${styles.head}`}>
-        <p className="eyebrow">Legal</p>
+      <section className={`wrap page-head ${styles.head}`}>
         <h1>Terms of use</h1>
-        <p className={styles.updated}>Last updated 25 August 2026</p>
+        <p className={styles.updated}>Last updated 18 October 2026</p>
       </section>
 
       <section className={`wrap ${styles.body}`}>

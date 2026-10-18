@@ -1,21 +1,28 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import type { Electrode } from "@/lib/data";
 
 export type ColorMode = "resp" | "attr" | "subject";
 
-const SUB_COLORS = [
-  "#B4530A", "#33637D", "#2F6A4A", "#8A5A2B",
-  "#5B4B8A", "#A32C2C", "#3E7C8C", "#7A6A20",
-];
+const cssVar = (name: string, fallback: string) => {
+  if (typeof document === "undefined") return fallback;
+  const v = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  return v || fallback;
+};
 
-/** Warm to cool ramp. Avoids a rainbow, which misleads on ordered data. */
+/** One colour per patient, from the stylesheet so they fit both themes. */
+function subColor(i: number) {
+  return cssVar(`--sub-${i + 1}`, "#888888");
+}
+
+/** Quiet to busy ramp: two greys from the stylesheet up to the accent. Avoids a rainbow,
+ *  which misleads on ordered data. */
 function ramp(t: number) {
   const c = Math.max(0, Math.min(1, t));
-  const lo = new THREE.Color("#2C3E4C");
-  const mid = new THREE.Color("#C9C4B4");
-  const hi = new THREE.Color("#C4560A");
+  const lo = new THREE.Color(cssVar("--map-lo", "#9aa7ad"));
+  const mid = new THREE.Color(cssVar("--map-mid", "#5d7f8c"));
+  const hi = new THREE.Color(cssVar("--signal", "#176f8c"));
   return c < 0.5
     ? lo.clone().lerp(mid, c * 2)
     : mid.clone().lerp(hi, (c - 0.5) * 2);
@@ -32,6 +39,12 @@ export default function BrainCanvas({
 }) {
   const host = useRef<HTMLDivElement>(null);
   const state = useRef<any>({});
+  const [theme, setTheme] = useState(0);
+  useEffect(() => {
+    const on = () => setTheme((n) => n + 1);
+    document.addEventListener("themechange", on);
+    return () => document.removeEventListener("themechange", on);
+  }, []);
 
   // Build the scene once.
   useEffect(() => {
@@ -62,7 +75,7 @@ export default function BrainCanvas({
     const glass = new THREE.Mesh(
       new THREE.SphereGeometry(1, 48, 32),
       new THREE.MeshStandardMaterial({
-        color: 0x9aa3a8, transparent: true, opacity: 0.1,
+        color: 0x9aa3a8, transparent: true, opacity: 0.12,
         roughness: 1, metalness: 0, side: THREE.DoubleSide, depthWrite: false,
       })
     );
@@ -202,7 +215,7 @@ export default function BrainCanvas({
       mesh.setMatrixAt(i, m);
       let col: THREE.Color;
       if (mode === "subject") {
-        col = new THREE.Color(SUB_COLORS[Number(p.sub.slice(-2)) - 1] ?? "#888");
+        col = new THREE.Color(subColor(Number(p.sub.slice(-2)) - 1));
       } else if (mode === "attr") {
         col = ramp(p.attr);
       } else {
@@ -217,7 +230,7 @@ export default function BrainCanvas({
     old.parent?.remove(old);
     s.mesh = mesh;
     s.points = pts;
-  }, [electrodes, mode]);
+  }, [electrodes, mode, theme]);
 
   // Move the highlight ring onto the chosen contact.
   useEffect(() => {

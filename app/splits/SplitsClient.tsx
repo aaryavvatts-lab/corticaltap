@@ -75,9 +75,8 @@ export default function SplitsClient() {
 
   return (
     <>
-      <section className={`wrap ${styles.head}`}>
-        <p className="eyebrow">Tool 5 of 5</p>
-        <h1>Why splitting this data is a trap</h1>
+      <section className={`wrap page-head ${styles.head}`}>
+        <h1>Why the usual split is a trap</h1>
         <p className={`prose ${styles.lede}`}>
           Before any model gets built you have to decide which parts of the recording it
           learns from and which parts you test it on. On this data the obvious choices give

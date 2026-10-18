@@ -10,10 +10,9 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <section className={`wrap ${styles.head}`}>
-        <p className="eyebrow">Legal</p>
+      <section className={`wrap page-head ${styles.head}`}>
         <h1>Accessibility</h1>
-        <p className={styles.updated}>Last updated 25 August 2026</p>
+        <p className={styles.updated}>Last updated 18 October 2026</p>
       </section>
 
       <section className={`wrap ${styles.body}`}>
@@ -34,9 +33,9 @@ export default function Page() {
         <h2 id="built">What has been done</h2>
         <h3>Reading and seeing</h3>
         <ul>
-          <li>Body text is set in Atkinson Hyperlegible, a typeface designed by the Braille Institute to keep similar letters apart for readers with low vision.</li>
+          <li>Body text is set at 17 to 19 pixels in a single serif typeface, Erode, with a measure of about 62 characters, in full ink on both the light and the dark ground.</li>
           <li>Text and background combinations meet at least the 4.5 to 1 contrast ratio in both light and dark, and larger text meets 3 to 1.</li>
-          <li>Light and dark both exist as real designs, and the site follows your system setting unless you override it with the button in the header.</li>
+          <li>Light and dark both exist as real designs. The site follows your system setting unless you override it with the text control in the header, which reports its state and remembers your choice.</li>
           <li>Text resizes with your browser zoom and reflows to a single column, with no loss of content up to 400 percent.</li>
           <li>Colour is never the only signal. Results carry a word such as passed or did not hold up, not just a colour.</li>
         </ul>
@@ -51,7 +50,7 @@ export default function Page() {
         <h3>Motion</h3>
         <ul>
           <li>The 3D brain map turns slowly on load and stops as soon as you touch it.</li>
-          <li>If your system asks for reduced motion, the map does not turn on its own and transitions are switched off.</li>
+          <li>Sections fade in once as they come into view, the title rises once on load, and the picture beside the tool list changes when you point at a tool. If your system asks for reduced motion, all of that is switched off and the map does not turn on its own. Nothing is hidden while waiting for a script.</li>
           <li>Nothing flashes, blinks or auto plays with sound.</li>
         </ul>
 

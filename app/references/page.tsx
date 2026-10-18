@@ -117,8 +117,7 @@ function Row({ r }: { r: Ref }) {
 export default function Page() {
   return (
     <>
-      <section className={`wrap ${styles.head}`}>
-        <p className="eyebrow">References</p>
+      <section className={`wrap page-head ${styles.head}`}>
         <h1>What this is built on</h1>
         <p className={`prose ${styles.lede}`}>
           Every source below is a real published paper or dataset and every link goes to

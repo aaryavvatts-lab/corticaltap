@@ -5,16 +5,15 @@ import styles from "../legal.module.css";
 export const metadata: Metadata = {
   title: "Cookies and storage",
   description:
-    "This site sets no cookies at all. Two small items are kept in local storage for your colour choice and the banner. Here is exactly what they are and how to remove them.",
+    "This site sets no cookies at all. One small item is kept in local storage for your colour choice, and only if you pick one. Here is exactly what it is and how to remove it.",
 };
 
 export default function Page() {
   return (
     <>
-      <section className={`wrap ${styles.head}`}>
-        <p className="eyebrow">Legal</p>
+      <section className={`wrap page-head ${styles.head}`}>
         <h1>Cookies and storage</h1>
-        <p className={styles.updated}>Last updated 25 August 2026</p>
+        <p className={styles.updated}>Last updated 18 October 2026</p>
       </section>
 
       <section className={`wrap ${styles.body}`}>
@@ -25,9 +24,9 @@ export default function Page() {
             is why there is no consent wall asking you to accept anything before reading.
           </p>
           <p>
-            Two small items are saved in local storage so the site behaves sensibly on your
-            next visit. Neither is a cookie, neither is sent to any server, and neither can
-            identify you.
+            One small item is saved in local storage, and only if you press the Light or
+            Dark control in the header, so the site keeps your colours on the next page. It
+            is not a cookie, it is not sent to any server, and it cannot identify you.
           </p>
         </div>
 
@@ -43,14 +42,9 @@ export default function Page() {
               </thead>
               <tbody>
                 <tr>
-                  <td className="mono">ct-theme</td><td>Local storage</td>
-                  <td className="mono">light or dark</td>
+                  <td><code>theme</code></td><td>Local storage</td>
+                  <td>light or dark</td>
                   <td>Keeps the colours you picked instead of resetting every visit</td>
-                </tr>
-                <tr>
-                  <td className="mono">ct-notice-seen</td><td>Local storage</td>
-                  <td className="mono">1</td>
-                  <td>Stops the storage banner reappearing after you close it</td>
                 </tr>
               </tbody>
             </table>
@@ -59,24 +53,22 @@ export default function Page() {
         <p>
           Local storage is different from a cookie in one way that matters here: it is never
           attached to network requests. A cookie travels with every request to the server.
-          These values stay on your machine and are only read by the page itself.
+          This value stays on your machine and is only read by the page itself.
         </p>
 
-        <h2 id="why">Why show a banner at all</h2>
+        <h2 id="why">Why there is no banner</h2>
         <p>
-          Strictly, a site that stores only what these two do is not required to ask
-          permission, because both are needed for the site to work the way you asked it to.
-          The banner is there to say plainly what is stored rather than to collect consent,
-          which is why it has one button and no options to weigh up.
+          A site that stores only a setting you chose yourself is not required to ask
+          permission, because that setting is needed for the site to work the way you asked
+          it to. A banner would be noise, so there is none. This page says plainly what is
+          stored instead.
         </p>
 
         <h2 id="third">Third party requests</h2>
         <p>
-          Fonts are loaded from Google Fonts, so your browser makes a request to
-          fonts.googleapis.com and fonts.gstatic.com. Google does not set cookies for font
-          requests, but it does receive your IP address and browser details as part of the
-          request itself. Blocking those requests leaves the site fully usable with fallback
-          type.
+          There are none. The typeface is served from this site under its own licence, so
+          no font service sees your request. Every file a page loads comes from this same
+          address.
         </p>
         <p>
           The brain recordings, figures and model weights the tools use are served from this
@@ -85,13 +77,13 @@ export default function Page() {
 
         <h2 id="remove">Removing what is stored</h2>
         <p>
-          Clearing site data for this domain in your browser removes both items at once.
+          Clearing site data for this domain in your browser removes it.
           The path is usually settings, then privacy, then site data or cookies and site
           data. In private or incognito windows nothing is kept once you close the window.
         </p>
         <p>
-          The site works fine with storage blocked. You will simply get the banner each
-          visit and the theme will follow your system setting.
+          The site works fine with storage blocked. The theme simply follows your system
+          setting on every visit.
         </p>
 
         <p>

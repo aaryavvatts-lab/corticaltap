@@ -90,7 +90,7 @@ export default function SignalsClient() {
     const stepPer5s = 5 / man.hop_s;
     for (let i = Math.ceil(t0 / stepPer5s) * stepPer5s; i <= t1; i += stepPer5s) {
       g.beginPath(); g.moveTo(X(i), top); g.lineTo(X(i), h - bottom); g.stroke();
-      g.fillStyle = muted; g.font = "10px 'JetBrains Mono', monospace";
+      g.fillStyle = muted; g.font = "13px Erode, Georgia, serif";
       g.fillText(`${(i * man.hop_s).toFixed(0)}s`, X(i) + 3, top - 8);
     }
 
@@ -107,7 +107,7 @@ export default function SignalsClient() {
       }
       g.stroke();
       g.globalAlpha = 1;
-      g.fillStyle = muted; g.font = "9px 'JetBrains Mono', monospace";
+      g.fillStyle = muted; g.font = "13px Erode, Georgia, serif";
       g.fillText(meta.channels[c], 3, yMid - laneH * 0.2);
     }
 
@@ -124,7 +124,7 @@ export default function SignalsClient() {
     // forecast error strip
     if (showErr && err) {
       const eTop = h - bottom + 14, eH = 44;
-      g.fillStyle = muted; g.font = "10px 'JetBrains Mono', monospace";
+      g.fillStyle = muted; g.font = "13px Erode, Georgia, serif";
       g.fillText("how wrong the forecast was", 3, eTop - 3);
       let lo = Infinity, hi = -Infinity;
       for (let i = t0; i <= t1; i++) {
@@ -168,9 +168,8 @@ export default function SignalsClient() {
 
   return (
     <>
-      <section className={`wrap ${styles.head}`}>
-        <p className="eyebrow">Tool 2 of 5</p>
-        <h1>Watch a brain during a tapping game</h1>
+      <section className={`wrap page-head ${styles.head}`}>
+        <h1>A brain during a tapping game</h1>
         <p className={`prose ${styles.lede}`}>
           These are real recordings, not a simulation. Each line is one electrode. Press
           play and the strip runs at the speed the recording was made. Red marks are
